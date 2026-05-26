@@ -21,6 +21,9 @@ public class Producto {
     @DescriptionsList // Así la referencia se visualiza usando un combo
     Categoria categoria; // Una referencia Java convencional
 
+    @ManyToOne(fetch=FetchType.LAZY)
+    @DescriptionsList
+    Autor autor;
 
     @Money // La propiedad precio se usa para almacenar dinero
     BigDecimal precio; // BigDecimal se suele usar para dinero
