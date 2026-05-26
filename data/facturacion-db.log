@@ -1,16 +1,7 @@
 /*C4*/SET SCHEMA PUBLIC
 DISCONNECT
 /*C5*/SET SCHEMA PUBLIC
-alter table Cliente add column codigoPostal integer
-alter table Cliente add column municipio varchar(20)
-alter table Cliente add column provincia varchar(30)
-alter table Cliente add column viaPublica varchar(30)
-DELETE FROM CLIENTE WHERE NUMERO=1
-INSERT INTO CLIENTE VALUES(1,'Jarold',10000,'Managua','Managua','Carretera Masaya, km 12.2')
-COMMIT
-DELETE FROM CLIENTE WHERE NUMERO=2
-INSERT INTO CLIENTE VALUES(2,'Nora',10000,'Managua','Managua','Carretera Sur, km 9')
-COMMIT
-DELETE FROM CLIENTE WHERE NUMERO=3
-INSERT INTO CLIENTE VALUES(3,'Hendrix',10000,'Managua','Managua','Carretera Norte, km 6')
+INSERT INTO FACTURA VALUES('8a80c5b59e656daf019e656fbf0a0000',2026,'2026-05-26',1,'Pedido Jarold',1)
+INSERT INTO FACTURA_DETALLES VALUES('8a80c5b59e656daf019e656fbf0a0000',3,1)
+INSERT INTO FACTURA_DETALLES VALUES('8a80c5b59e656daf019e656fbf0a0000',2,2)
 COMMIT
